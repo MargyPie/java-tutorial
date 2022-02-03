@@ -1,0 +1,82 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+
+<StackPane fx:controller="sample.Controller"
+           xmlns:fx="http://javafx.com/fxml">
+
+    <Label text="The label text" style="-fx-background-color: green"/>
+    <Button text="Button One" style="-fx-background-color: red"/>
+    <Label text="The second label text" style="-fx-background-color: blue"/>
+
+</StackPane>
+
+
+<!--
+&lt;!&ndash; The FloatPane layout doesn't cut of its children.
+     The layout will wrap the children to the next row.
+     If the user adjusts the width of the window, the children will pop back to the last row.
+     On the opposite the HBox / VBox are similar, but they don't rearrange the children, when the window is resized &ndash;&gt;
+&lt;!&ndash; The TilePane layout is almost the same like FloatPane.
+     The children have an assigned space in their row. &ndash;&gt;
+<TilePane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" orientation="HORIZONTAL">
+
+    <Button text="Button One"/>
+    <Button text="Button Two"/>
+    <Button text="Button Three"/>
+    <Button text="Button Four"/>
+    <Button text="Button Five"/>
+    <Button text="Button Six"/>
+    <Button text="Button Seven"/>
+    <Button text="Button Eight"/>
+    <Button text="Button Nine"/>
+    <Button text="Button Ten"/>
+
+</TilePane>
+-->
+
+
+
+<!--
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    &lt;!&ndash; alignment can not be set to the BorderPane, only to its children &ndash;&gt;
+
+    &lt;!&ndash; Nesting a label in the top part of the BorderPane layout &ndash;&gt;
+    <top>
+        <Label text="This label is in the top position" alignment="CENTER"
+               BorderPane.alignment="CENTER"
+                style="-fx-border-color: blue; -fx-border-width: 3; -fx-border-style: dashed"/>
+    </top>
+
+    <center>
+        <Label text="This label is in the center position and has really looooooooooooooooooooooooooooooooooooooo text"/>
+    </center>
+
+    <left>
+        <Label text="This label is in the left position" alignment="CENTER"/>
+    </left>
+
+    <right>
+        <Label text="This label is in the right position"/>
+    </right>
+
+    &lt;!&ndash; Nesting the buttons in the bottom part of the BorderPane layout &ndash;&gt;
+    <bottom>
+        &lt;!&ndash; alignment can only be applied to BorderPane's children
+            If the children extent the space, they are cut of in the HBox/VBox layout &ndash;&gt;
+        <HBox spacing="10" alignment="TOP_RIGHT">
+
+            <padding>
+                <Insets bottom="10" right="10"/>
+            </padding>
+
+            <Button text="Okay" prefWidth="90"/>
+            <Button text="Cancel" prefWidth="90"/>
+            <Button text="Help" prefWidth="90"/>
+
+        </HBox>
+    </bottom>
+
+</BorderPane>-->

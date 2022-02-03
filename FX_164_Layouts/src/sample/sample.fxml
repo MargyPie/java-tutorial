@@ -1,0 +1,33 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="top_center" hgap="10" vgap="10"
+          gridLinesVisible="true">
+    <!-- gridLinesVisible="true" shows the gridlines and gaps -->
+
+    <!-- To add a padding between the title bar and the contents -->
+    <padding>
+        <Insets top="10"/>
+    </padding>
+
+    <!-- ColumnConstraints apply to the columns in order. First for the first and so on -->
+    <!--<columnConstraints>-->
+    <!--<ColumnConstraints percentWidth="50.0"/>-->
+    <!--<ColumnConstraints percentWidth="50.0"/>-->
+    <!--</columnConstraints>-->
+
+    <!--Default position is row=0, column=0
+     Therefore, if not specified, the buttons will be stacked on top of each other
+     Hight and width always depend on the widest and tallest buttons of a row/column -->
+    <Button text="Button One" GridPane.rowIndex="0" GridPane.columnIndex="0"
+            GridPane.halignment="RIGHT"/>   <!-- Content is right aligned now-->
+    <Button text="Button Two" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Button text="Button Three" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <Button text="Button Long Button Four" GridPane.rowIndex="3" GridPane.columnIndex="0"
+            GridPane.columnSpan="2"/>       <!-- Content spans over two columns now-->
+    <Button text="Button Five " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+</GridPane>

@@ -1,0 +1,46 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <!-- alignment can not be set to the BorderPane, only to its children -->
+
+    <!-- Nesting a label in the top part of the BorderPane layout -->
+    <top>
+        <Label text="This label is in the top position" alignment="CENTER"
+               BorderPane.alignment="CENTER"
+                style="-fx-border-color: blue; -fx-border-width: 3; -fx-border-style: dashed"/>
+    </top>
+
+    <center>
+        <Label text="This label is in the center position and has really looooooooooooooooooooooooooooooooooooooo text"/>
+    </center>
+
+    <left>
+        <Label text="This label is in the left position" alignment="CENTER"/>
+    </left>
+
+    <right>
+        <Label text="This label is in the right position"/>
+    </right>
+
+    <!-- Nesting the buttons in the bottom part of the BorderPane layout -->
+    <bottom>
+        <!-- alignment can only be applied to BorderPane's children -->
+        <HBox spacing="10" alignment="TOP_RIGHT">
+
+            <padding>
+                <Insets bottom="10" right="10"/>
+            </padding>
+
+            <Button text="Okay" prefWidth="90"/>
+            <Button text="Cancel" prefWidth="90"/>
+            <Button text="Help" prefWidth="90"/>
+
+        </HBox>
+    </bottom>
+
+</BorderPane>
